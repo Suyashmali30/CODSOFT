@@ -1,0 +1,43 @@
+import java.util.*;
+public class number_game{
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int chances=10;
+    int finals=0;
+    boolean play_again=true;
+    System.out.println("*****Number Game*****");
+    System.out.println("You have "+chances+" chances to win the game");
+    while (play_again) {
+        int random=getrandomN(1,100);
+        boolean guess=false;
+        for(int i=0;i<chances;i++){
+            System.out.print("chance "+(i+1)+" Enter your guess =");
+            int user=sc.nextInt();
+            if(user==random){
+                guess=true;
+                finals+=1;
+                System.out.println("Guess is right");
+                break;
+                }
+            else if(user>random){
+                System.out.println("Guess is too high! ,guess again");
+            }
+            else{
+                System.out.println("Guess is too low! ,guess again");
+            }       
+        }
+        if(guess==false){
+            System.out.println("You lost the game and the correct number is "+random);
+        }
+        System.out.println("Press Y to Play Again or Press N to Exit");
+        String choice=sc.next();
+        play_again=choice.equalsIgnoreCase("y");  
+    }
+    System.out.println("Game has ended hope you enjoyed...");
+    System.out.println("Here is your score "+finals);
+    
+    }
+    public static int getrandomN(int min,int max){
+        return (int)(Math.random()*(max-min+1)+min);        
+    }
+}
