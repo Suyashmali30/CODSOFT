@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Student_Grade_Calculator {
+    public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("*****Student Grade Calculator*****");
+     System.out.print("Enter Your Number of Subject= ");
+     int sub=sc.nextInt();
+     int total_marks=0;
+
+     for(int i=1;i<=sub;i++){
+        System.out.print("Enter Marks Obtained in Subject "+i+"=");
+        int marks_obt=sc.nextInt();
+        total_marks=total_marks+marks_obt;
+     }
+     double average_marks=total_marks/sub;
+     String Grade;
+     if(average_marks>=90){
+        Grade="O";
+     }
+     else if(average_marks>=80){
+        Grade="A";
+     }
+     else if(average_marks>=70){
+        Grade="B";
+     }
+     else if(average_marks>=60){
+        Grade="c";
+     }
+     else if(average_marks>=50){
+        Grade="D";
+     }
+     else if(average_marks>=40){
+        Grade="E";
+     }
+     else{
+        Grade="F";
+     }
+     System.out.println("Total Marks = "+total_marks);
+     System.out.println("Average Percentage = "+average_marks+"%");
+     System.out.println("Grade= "+Grade);
+     
+
+
+    }
+}
