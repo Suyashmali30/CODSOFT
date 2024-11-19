@@ -4,12 +4,14 @@ public class Student_Grade_Calculator {
     public static void main(String[] args) {
      Scanner sc=new Scanner(System.in);
      System.out.println("*****Student Grade Calculator*****");
+     System.out.print("Enter Your Name: ");
+     String name=sc.nextLine();
      System.out.print("Enter Your Number of Subject= ");
      int sub=sc.nextInt();
      int total_marks=0;
 
      for(int i=1;i<=sub;i++){
-        System.out.print("Enter Marks Obtained in Subject "+i+"=");
+        System.out.print("Enter Marks Obtained (out of 100) in Subject "+i+"=");
         int marks_obt=sc.nextInt();
         total_marks=total_marks+marks_obt;
      }
@@ -36,9 +38,10 @@ public class Student_Grade_Calculator {
      else{
         Grade="F";
      }
+     System.out.println("Result of "+name);
      System.out.println("Total Marks = "+total_marks);
      System.out.println("Average Percentage = "+average_marks+"%");
-     System.out.println("Grade= "+Grade);
+     System.out.println("Grade = "+Grade);
      
 
 
