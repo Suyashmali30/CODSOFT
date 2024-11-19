@@ -43,6 +43,5 @@ public class Student_Grade_Calculator {
      System.out.println("Average Percentage = "+average_marks+"%");
      System.out.println("Grade = "+Grade);
      
-
     }
 }
